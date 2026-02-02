@@ -15,7 +15,7 @@
 #   - OPAM_REPO_PIN should contain a compatible dune version
 #   - When updating OPAM_REPO_PIN, review DUNE_VERSION for consistency
 #─────────────────────────────────────────────────────────────────────────────
-DUNE_VERSION := 3.20.2
+DUNE_VERSION := 3.21.0
 OPAM_REPO_PIN := 584630e7a7e27e3cf56158696a3fe94623a0cf4f
 
 # --- Dune binary download configuration ---
