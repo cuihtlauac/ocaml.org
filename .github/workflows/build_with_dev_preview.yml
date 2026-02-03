@@ -28,8 +28,10 @@ jobs:
         run: brew update && brew reinstall libev openssl@3 # Openssl is a workaround for https://github.com/ocaml/opam-repository/issues/19676
         if: runner.os == 'macOS'
 
-      - name: Setup Dune Developer Preview
-        uses: ocaml-dune/setup-dune@v1
+      # Note: We intentionally don't use setup-dune here because:
+      # 1. Our Makefile downloads a specific dune version to .dune-bin/
+      # 2. setup-dune sets DUNE_CACHE_ROOT which can cause version conflicts
+      #    if the cache contains packages built by a different dune version
 
       - name: Checkout Repo
         uses: actions/checkout@v5
