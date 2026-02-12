@@ -3,6 +3,9 @@ _build/
 dune.lock
 dev-tools.locks
 
+# Prebuilt dune binary (downloaded by Makefile)
+.dune-bin/
+
 # Local OPAM switch
 _opam/
 
